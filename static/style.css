@@ -1,0 +1,15 @@
+p {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+h1 {
+    color: rgb(0, 195, 255);
+    font-size: 30px;
+    font-weight: bold;
+}
+h2 {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
