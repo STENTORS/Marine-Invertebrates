@@ -1,15 +1,124 @@
-p {
-    color: green;
-    font-size: 20px;
-    font-weight: bold;
+/* Reset some defaults */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #08363c);
+    color: #013243;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
 h1 {
-    color: rgb(0, 195, 255);
-    font-size: 30px;
-    font-weight: bold;
+    text-align: center;
+    color: #01579b;
+    margin-bottom: 1rem;
 }
+
 h2 {
-    color: red;
-    font-size: 25px;
+    color: #0277bd;
+    border-bottom: 2px solid #4dd0e1;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+strong {
+    color: #004d40;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #ffffffcc;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 105, 137, 0.2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #4dd0e1;
+    margin-top: 0.5rem;
+}
+
+a {
+    color: #00695c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.animal-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+    margin: 20px;
+    padding: 15px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+.image-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.view-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.animal-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
     font-weight: bold;
+    text-align: center;
+}
+.button-link:hover {
+    background-color: #0056b3;
 }

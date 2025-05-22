@@ -9,3 +9,9 @@ app = Flask(__name__)
 def home():
     data = API.get_marine_invertebrates()
     return render_template("index.html", data=data)
+
+
+@app.route("/collection")
+def collection():
+    data = API.get_marine_invertebrates()
+    return render_template("collection.html", data=data)

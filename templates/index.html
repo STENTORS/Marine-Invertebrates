@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marine Invertibrates</title>
+    <title>Marine Invertebrates</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 
+</head>
 <body>
     <h1>Marine Invertebrates</h1>
+
+    <a href="{{ url_for('collection') }}" class="button-link">
+        Go to our full collection of crustaceans
+    </a>
     
-    <p>{{data}}</p>
-</body>
+
+    </body>
 </html>
