@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marine Invertebrates</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marine Invertebrates</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+  <div class="container">
     <h1>Marine Invertebrates</h1>
 
-    <a href="{{ url_for('collection') }}" class="button-link">
-        Go to our full collection of crustaceans
-    </a>
-    
+    <div class="box">
+      <div class="info-card">
+        <p>
+          Crustaceans are a diverse group of mostly aquatic invertebrate animals within the arthropods, traditionally classified under the subphylum Crustacea. They include crabs, lobsters, shrimp, barnacles, and many others. Crustaceans are now considered part of a larger group called Pancrustacea, which also includes insects, showing their close evolutionary relationship.
+        </p>
+        <div class="responsive-iframe">
+          <iframe src="https://www.youtube.com/embed/nfTQUX-GMjc?si=KvBjK5YQiXp-_LvI?rel=1&amp;modestbranding=1&amp;autoplay=1" title="Facts: Crustaceans" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
 
-    </body>
+    <a href="{{ url_for('collection') }}" class="button-link">
+      Explore Our Full Collection of Crustaceans →
+    </a>
+  </div>
+
+</body>
 </html>

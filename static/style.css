@@ -1,4 +1,3 @@
-/* Reset some defaults */
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@ body, h1, h2, p, ul {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #08363c);
+    background: linear-gradient(to bottom, #86b9df, #12014b);
     color: #013243;
     padding: 2rem;
     line-height: 1.6;
@@ -101,6 +100,27 @@ a:hover {
     border-radius: 4px;
 }
 
+.info-card {
+    display: inline-block;
+	color: black;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	background: hsl(187 75% 64%);
+	border-radius: 0.6rem;
+	font-weight: 700;
+	border: 0.35rem solid;
+}
+.box{
+	--shadowColor: 187 60% 40%;
+	display: flex;
+	flex-wrap: wrap;
+	background: hsl(187 70% 85%);
+	width: 100%;
+	box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+	border-radius: 0.8rem;
+	border: 0.5rem solid;
+}
+
 .animal-card {
     border: 1px solid #ccc;
     padding: 15px;
@@ -121,4 +141,56 @@ a:hover {
 }
 .button-link:hover {
     background-color: #0056b3;
+}
+
+
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.box {
+    --shadowColor: 187 60% 40%;
+    display: flex;
+    flex-direction: column;
+    background: hsl(187 70% 92%);
+    box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+    border-radius: 0.8rem;
+    border: 0.5rem solid;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    color: #013243;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-weight: normal;
+    border: none;
+}
+
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.75rem;
 }
