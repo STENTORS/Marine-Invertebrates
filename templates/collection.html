@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marine Invertebrates</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marine Invertebrates</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Marine Crustaceans</h1>
+        <h1 style="font-style: italic;">Our Collection</h1>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-<body>
-
-    <h1>Marine Invertebrates</h1>
-
-      
-    {% for animal in data %}
-    <div class="animal-card">
-    
-        <h2>Specimen Info</h2>
-        <p><strong>Scientific Name:</strong> {{ animal.scientificName }}</p>
-        <p><strong>Genus:</strong> {{ animal.genus }}</p>
-        <p><strong>subDepartment:</strong> {{ animal.subDepartment }}</p>
-        <p><strong>class:</strong> {{ animal.class }}</p>
-        <p><strong>Country:</strong> {{ animal.country }}</p>
-    
-        <h2>Images</h2>
-        {% if animal.associatedMedia %}
-            <div>
-                <!-- Show the first image -->
-                <img src="{{ animal.associatedMedia[0].identifier }}" alt="{{ animal.associatedMedia[0].title }}" width="400">
-                <p><strong>License:</strong> <a href="{{ animal.associatedMedia[0].license }}">{{ animal.associatedMedia[0].license }}</a></p>
-            </div>
-
-            {% if animal.associatedMedia|length > 1 %}
-            <button class="view-more-btn" onclick="toggleGrid('grid-{{ loop.index }}')">View Images</button>
-            <div id="grid-{{ loop.index }}" class="image-grid">
-                {% for media in animal.associatedMedia[1:] %}
-
+        
+        {% for animal in data %}
+        <div class="animal-card">
+        
+            <h2>Specimen Info</h2>
+            <p><strong>Scientific Name:</strong> {{ animal.scientificName }}</p>
+            <p><strong>Genus:</strong> {{ animal.genus }}</p>
+            <p><strong>subDepartment:</strong> {{ animal.subDepartment }}</p>
+            <p><strong>class:</strong> {{ animal.class }}</p>
+            <p><strong>Country:</strong> {{ animal.country }}</p>
+        
+            <h2>Images</h2>
+            {% if animal.associatedMedia %}
                 <div>
-                    <img src="{{ media.identifier }}" alt="{{ media.title }}">
-                    <p><strong>License:</strong> <a href="{{ media.license }}">{{ media.license }}</a></p>
+                    <!-- Show the first image -->
+                    <img class="img-card" src="{{ animal.associatedMedia[0].identifier }}" alt="{{ animal.associatedMedia[0].title }}" width="400">
+                    <p><strong>License:</strong> <a href="{{ animal.associatedMedia[0].license }}">{{ animal.associatedMedia[0].license }}</a></p>
                 </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-        {% else %}
-            <p>No associated media available.</p>
-        {% endif %}
-    </div>
-    {% endfor %}
 
-    <script>
-        function toggleGrid(id) {
-            const grid = document.getElementById(id);
-            grid.style.display = (grid.style.display === 'grid') ? 'none' : 'grid';
-        }
-    </script>
-</body>
+                {% if animal.associatedMedia|length > 1 %}
+                <button class="view-more-btn" onclick="toggleGrid('grid-{{ loop.index }}')">View Images</button>
+                <div id="grid-{{ loop.index }}" class="image-grid">
+                    {% for media in animal.associatedMedia[1:] %}
+
+                    <div>
+                        <img class="img-card" src="{{ media.identifier }}" alt="{{ media.title }}">
+                        <p><strong>License:</strong> <a href="{{ media.license }}">{{ media.license }}</a></p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% else %}
+                <p>No associated media available.</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <script>
+            function toggleGrid(id) {
+                const grid = document.getElementById(id);
+                grid.style.display = (grid.style.display === 'grid') ? 'none' : 'grid';
+            }
+        </script>
+    </body>
 </html>

@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marine Invertebrates</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="container">
-    <h1>Marine Invertebrates</h1>
+    <h1>Marine Crustaceans</h1>
+    <h1 style="font-style: italic;">Introduction</h1>
 
     <div class="box">
       <div class="info-card">
@@ -25,7 +29,21 @@
     <a href="{{ url_for('collection') }}" class="button-link">
       Explore Our Full Collection of Crustaceans →
     </a>
+    <a href="{{ url_for('home') }}" class="button-link">
+      Ocean Clean up game →
+    </a>
   </div>
+
+</div>
+<div class="animal-grid">
+  <div>Scientific name</div>
+  <div><img src="{{url_for('static', filename='Alicella-gigantea.png')}}" alt="Alicella gigantea"/></div>
+
+  <div><img src="{{url_for('static', filename='Alicella-gigantea.png')}}" alt="Alicella gigantea"/></div>
+  <div>Scientific name</div>
+
+</div>
+
 
 </body>
 </html>

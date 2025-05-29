@@ -1,19 +1,21 @@
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
+    font-family: "Playfair Display", serif;
+
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Playfair Display", serif;
     background: linear-gradient(to bottom, #86b9df, #12014b);
     color: #013243;
-    padding: 2rem;
     line-height: 1.6;
 }
 
 h1 {
-    text-align: center;
-    color: #01579b;
+    text-align: left;
+    font-size: 70px;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -46,7 +48,7 @@ li {
     box-shadow: 0 4px 8px rgba(0, 105, 137, 0.2);
 }
 
-img {
+.img-card {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -132,7 +134,8 @@ a:hover {
 .button-link {
     display: inline-block;
     padding: 10px 16px;
-    background-color: #007bff;
+    border: black;
+    background-color: #499FC1;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -140,17 +143,15 @@ a:hover {
     text-align: center;
 }
 .button-link:hover {
-    background-color: #0056b3;
+    background-color: #499FC1;
 }
-
-
-
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 1rem;
 }
+
 
 .box {
     --shadowColor: 187 60% 40%;
@@ -194,3 +195,17 @@ a:hover {
     border: none;
     border-radius: 0.75rem;
 }
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  box-sizing: border-box;
+}
+
+.animal-grid > div {
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  background-color: #00695c;
+}
+
