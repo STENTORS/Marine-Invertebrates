@@ -202,10 +202,13 @@ a:hover {
   box-sizing: border-box;
 }
 
+.label {
+    border: 5px solid white;
+}
+
 .animal-grid > div {
-  color: #000;
+  color: #ffffff;
   font-size: 30px;
   text-align: center;
-  background-color: #00695c;
 }
 
