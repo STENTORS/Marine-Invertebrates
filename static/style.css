@@ -204,6 +204,8 @@ a:hover {
 
 .label {
     border: 5px solid white;
+    width: 50%;
+    text-align: center;
 }
 
 .animal-grid > div {
