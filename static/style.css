@@ -196,6 +196,18 @@ a:hover {
     border-radius: 0.75rem;
 }
 
+.button-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 6em;
+}
+
+.button {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto; 
+}
+
 .animal-grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -206,11 +218,12 @@ a:hover {
     border: 5px solid white;
     width: 50%;
     text-align: center;
+    margin: 0 auto; 
 }
+
 
 .animal-grid > div {
   color: #ffffff;
   font-size: 30px;
   text-align: center;
 }
-
