@@ -31,7 +31,7 @@ p {
     margin-bottom: 0.5rem;
 }
 
-strong {
+strong .animal-card {
     color: #004d40;
 }
 
@@ -215,15 +215,33 @@ a:hover {
 }
 
 .label {
-    border: 5px solid white;
-    width: 50%;
-    text-align: center;
-    margin: 0 auto; 
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    width: auto;
+    height: fit-content;
+    max-width: 500px;
+    font-size: 15px;
+    text-align: left;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1.5rem;
+    color: #ffffff;
+
 }
 
 
-.animal-grid > div {
-  color: #ffffff;
-  font-size: 30px;
-  text-align: center;
+.fixed-right-image {
+    display: flex;
+    align-items: flex-start;
+}
+
+.fixed-right-image img {
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
 }

@@ -31,7 +31,7 @@
     <a href="{{ url_for('collection') }}" class="button-link button">
       Explore Our Full Collection of Crustaceans →
     </a>
-    <a href="{{ url_for('home') }}" class="button-link button">
+    <a href="{{ url_for('game') }}" class="button-link button">
       Ocean Clean up game →
     </a>
   </div>
@@ -42,20 +42,47 @@
 
 
 <div class="animal-grid">
+
+  <div class="label">
+    <h1 style="font-size: 30px;">Pederson's shrimp</h1>
+    <p><strong>Habitat:</strong> Lives symbiotically with sea anemones like <em>Bartholomea annulata</em> and <em>Condylactis gigantea</em>, offering cleaning services to fish.</p>
+    <p><strong>Distribution:</strong> Found in the Western Atlantic, including the Caribbean, Bermuda, Bahamas, and parts of South America.</p>
+    <p><strong>Description:</strong> A small, transparent shrimp (up to 3 cm) with bluish and violet markings and long white antennae.</p>
+    <p><strong>Fun Fact:</strong> Its transparency can be disrupted by exercise or stress, causing it to become opaque temporarily.</p>
+    <p><strong>Environmental Impact:</strong> Plays a beneficial role in reef ecosystems by controlling ectoparasite populations on fish.</p>
+  </div>
   
   <div>
-    <p class="label">
-      Scientific name
-    </p>
+    <img style="height: 400px;" src="{{ url_for('static', filename='1.png') }}" alt="Ancylomenes pedersoni"/>
   </div>
 
-  <div><img src="{{url_for('static', filename='Alicella-gigantea.png')}}" alt="Alicella gigantea"/></div>
 
-  <div><img src="{{url_for('static', filename='Alicella-gigantea.png')}}" alt="Alicella gigantea"/></div>
+   <div>
+    <img style="height: 800px;" src="{{ url_for('static', filename='2.png') }}" alt="Tropical rock lobster"/>
+  </div>
+
+  <div class="label">
+    <h1 style="font-size: 30px;">Tropical rock lobster</h1>
+    <p><strong>Habitat:</strong> The tropical rock lobster (Panulirus ornatus) lives in shallow coastal waters with sandy or rocky bottoms, often around coral reefs, up to depths of 50 metres.</p>
+    <p><strong>Distribution:</strong> It is found throughout the Indo-Pacific region, including northern Australia, Southeast Asia, and parts of the western Pacific Ocean.</p>
+    <p><strong>Description:</strong> Panulirus ornatus has a colourful, spiny body with long antennae and no claws, growing up to 50 cm in length.</p>
+    <p><strong>Fun facts:</strong> This lobster undertakes mass migrations across the sea floor and can live communally in crevices and under ledges.</p>
+    <p><strong>Human Impact:</strong> It is heavily fished for its high market value, leading to concerns about overfishing and sustainability in some areas.</p>
+  </div>
+
+  <div class="label">
+    <h1 style="font-size: 30px;">Barnacles</h1>
+    <p><strong>Habitat:</strong> Barnacles attach themselves to hard surfaces like rocks, ships, whales, and piers, often found in intertidal zones down to 100 metres deep.</p>
+    <p><strong>Distribution:</strong> They are distributed worldwide in marine environments, from polar regions to tropical seas.</p>
+    <p><strong>Description:</strong> Barnacles are small, hard-shelled crustaceans that live in calcareous plates and feed by filtering plankton with their feathery legs.</p>
+    <p><strong>Fun facts:</strong> Barnacles begin life as free-swimming larvae before settling permanently on a surface, sometimes even on living animals.</p>
+    <p><strong>Human Impact:</strong> They cause biofouling on ships and underwater structures, increasing drag and fuel use, but also contribute to marine ecosystems as filter feeders.</p>
+  </div>
+
+
+
   <div>
-    <p class="label">
-      Scientific name
-    </p>
+    <img src="{{url_for('static', filename='3.png')}}" alt="Barnacles"/>
   </div>
 
 </div>

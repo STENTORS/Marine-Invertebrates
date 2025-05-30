@@ -7,11 +7,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    data = API.get_marine_invertebrates()
-    return render_template("index.html", data=data)
+    return render_template("index.html")
 
 
 @app.route("/collection")
 def collection():
     data = API.get_marine_invertebrates()
     return render_template("collection.html", data=data)
+
+@app.route("/game")
+def game():
+    return render_template("ocean_game.html")
