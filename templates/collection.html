@@ -30,7 +30,6 @@
                 <div>
                     <!-- Show the first image -->
                     <img class="img-card" src="{{ animal.associatedMedia[0].identifier }}" alt="{{ animal.associatedMedia[0].title }}" width="400">
-                    <p><strong>License:</strong> <a href="{{ animal.associatedMedia[0].license }}">{{ animal.associatedMedia[0].license }}</a></p>
                 </div>
 
                 {% if animal.associatedMedia|length > 1 %}
@@ -40,7 +39,6 @@
 
                     <div>
                         <img class="img-card" src="{{ media.identifier }}" alt="{{ media.title }}">
-                        <p><strong>License:</strong> <a href="{{ media.license }}">{{ media.license }}</a></p>
                     </div>
                     {% endfor %}
                 </div>
