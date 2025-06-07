@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marine Invertebrates</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static', filename='speech2text.js')}}" type="module"></script>
+
 </head>
 <body>
 
@@ -47,12 +49,13 @@
     <div>
 
       <div class="label" data-depth="1-15">
-        <h1 style="font-size: 30px;">Pederson's shrimp</h1>
-        <p><strong>Habitat:</strong> Lives symbiotically with sea anemones like <em>Bartholomea annulata</em> and <em>Condylactis gigantea</em>, offering cleaning services to fish.</p>
+        <h1 style="font-size: 30px;">Pederson's shrimp <button id="speak"><img style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
+        <p id="text"><strong>Habitat:</strong> Lives symbiotically with sea anemones like <em>Bartholomea annulata</em> and <em>Condylactis gigantea</em>, offering cleaning services to fish.</p>
         <p><strong>Distribution:</strong> Found in the Western Atlantic, including the Caribbean, Bermuda, Bahamas, and parts of South America.</p>
         <p><strong>Description:</strong> A small, transparent shrimp (up to 3 cm) with bluish and violet markings and long white antennae.</p>
         <p><strong>Fun Fact:</strong> Its transparency can be disrupted by exercise or stress, causing it to become opaque temporarily.</p>
-        <p><strong>Environmental Impact:</strong> Plays a beneficial role in reef ecosystems by controlling ectoparasite populations on fish.</p>
+        <p class="environment"><strong>Environmental Impact:</strong> Plays a beneficial role in reef ecosystems by controlling ectoparasite populations on fish. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
+        <textarea id="text"></textarea>
       </div>
     </div>
     
@@ -71,7 +74,7 @@
         <p><strong>Distribution:</strong> It is found throughout the Indo-Pacific region, including northern Australia, Southeast Asia, and parts of the western Pacific Ocean.</p>
         <p><strong>Description:</strong> Panulirus ornatus has a colourful, spiny body with long antennae and no claws, growing up to 50 cm in length.</p>
         <p><strong>Fun facts:</strong> This lobster undertakes mass migrations across the sea floor and can live communally in crevices and under ledges.</p>
-        <p><strong>Human Impact:</strong> It is heavily fished for its high market value, leading to concerns about overfishing and sustainability in some areas.</p>
+        <p class="environment"><strong>Human Impact:</strong> It is heavily fished for its high market value, leading to concerns about overfishing and sustainability in some areas. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 
@@ -82,7 +85,7 @@
         <p><strong>Distribution:</strong> They are distributed worldwide in marine environments, from polar regions to tropical seas.</p>
         <p><strong>Description:</strong> Barnacles are small, hard-shelled crustaceans that live in calcareous plates and feed by filtering plankton with their feathery legs.</p>
         <p><strong>Fun facts:</strong> Barnacles begin life as free-swimming larvae before settling permanently on a surface, sometimes even on living animals.</p>
-        <p><strong>Human Impact:</strong> They cause biofouling on ships and underwater structures, increasing drag and fuel use, but also contribute to marine ecosystems as filter feeders.</p>
+        <p class="environment"><strong>Human Impact:</strong> They cause biofouling on ships and underwater structures, increasing drag and fuel use, but also contribute to marine ecosystems as filter feeders. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 
@@ -101,7 +104,7 @@
         <p><strong>Distribution:</strong> They are common in coastal waters around the world, especially in temperate and tropical regions.</p>
         <p><strong>Description:</strong> Hermit crabs have soft, curved abdomens which they protect by occupying empty shells, with visible claws and long antennae.</p>
         <p><strong>Fun facts:</strong> When they outgrow their shells, hermit crabs search for larger ones and may even fight or queue for a better fit.</p>
-        <p><strong>Human Impact:</strong> Coastal pollution and habitat disruption affect hermit crab populations, and they are sometimes collected for the pet trade.</p>
+        <p class="environment"><strong>Human Impact:</strong> Coastal pollution and habitat disruption affect hermit crab populations, and they are sometimes collected for the pet trade. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 
@@ -112,7 +115,7 @@
         <p><strong>Distribution:</strong> They are found worldwide and are one of the most abundant metazoans on Earth by number.</p>
         <p><strong>Description:</strong> Copepods are tiny, shrimp-like crustaceans with a teardrop-shaped body, long antennae, and a segmented tail.</p>
         <p><strong>Fun facts:</strong> Some copepods can jump several times their body length and are a key part of the marine food web.</p>
-        <p><strong>Human Impact:</strong> They are affected by water pollution and climate change, but also play a role in carbon cycling and water quality.</p>
+        <p class="environment"><strong>Human Impact:</strong> They are affected by water pollution and climate change, but also play a role in carbon cycling and water quality. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 
@@ -131,18 +134,19 @@
         <p><strong>Distribution:</strong> They are found exclusively in the Southern Ocean around Antarctica, especially near the continental shelf.</p>
         <p><strong>Description:</strong> Ice krill are small, transparent shrimp-like crustaceans with large black eyes and bioluminescent organs.</p>
         <p><strong>Fun facts:</strong> They can form dense swarms and are a major food source for fish, seals, penguins, and whales in Antarctic ecosystems.</p>
-        <p><strong>Human Impact:</strong> Climate change and ice loss threaten their habitat, and krill fishing may disrupt food chains in the Southern Ocean.</p>
+        <p class="environment"><strong>Human Impact:</strong> Climate change and ice loss threaten their habitat, and krill fishing may disrupt food chains in the Southern Ocean. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 
     <div>
       <div class="label" data-depth="8900">
         <h1 style="font-size: 30px;">Alicella gigantea</h1>
+        
         <p><strong>Habitat:</strong> Alicella gigantea lives in deep-sea trenches, mainly at abyssal and hadal depths down to 8,931 metres.</p>
         <p><strong>Distribution:</strong> Found in the North Atlantic, North Pacific, and South West Pacific Oceans.</p>
         <p><strong>Description:</strong> It is the largest known amphipod, with individuals reaching up to 34 cm in length.</p>
         <p><strong>Fun facts:</strong> This species shows abyssal gigantism, likely due to cold temperatures, low food, fewer predators, and high oxygen levels.</p>
-        <p><strong>Human Impact:</strong> Despite its depth, it shows signs of pollution, with studies finding pesticides and heavy metals in its body.</p>
+        <p class="environment"><strong>Human Impact:</strong> Despite its depth, it shows signs of pollution, with studies finding pesticides and heavy metals in its body. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
       </div>
     </div>
 

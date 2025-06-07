@@ -57,11 +57,11 @@ li {
 }
 
 a {
-    color: #00695c;
-    text-decoration: none;
+    color: #ffffff;
 }
 
 a:hover {
+    color: #4dd0e1;
     text-decoration: underline;
 }
 
@@ -225,14 +225,18 @@ a:hover {
     border-radius: 0.5rem;
     width: auto;
     height: fit-content;
-    max-width: 500px;
-    font-size: 15px;
+    font-size: 25px;
     text-align: left;
-    margin: 0.5rem auto;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     color: #ffffff;
 }
 
+.environment {
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #007bff4b;
+}
 
 .depth-sticky-tab {
   position: fixed;
