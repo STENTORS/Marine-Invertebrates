@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="{{ url_for('static', filename='speech2text.js')}}" type="module"></script>
-
 </head>
 <body>
 
@@ -49,13 +48,12 @@
     <div>
 
       <div class="label" data-depth="1-15">
-        <h1 style="font-size: 30px;">Pederson's shrimp <button id="speak"><img style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
-        <p id="text"><strong>Habitat:</strong> Lives symbiotically with sea anemones like <em>Bartholomea annulata</em> and <em>Condylactis gigantea</em>, offering cleaning services to fish.</p>
+        <h1 style="font-size: 30px;">Pederson's shrimp <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
+        <p><strong>Habitat:</strong> Lives symbiotically with sea anemones like <em>Bartholomea annulata</em> and <em>Condylactis gigantea</em>, offering cleaning services to fish.</p>
         <p><strong>Distribution:</strong> Found in the Western Atlantic, including the Caribbean, Bermuda, Bahamas, and parts of South America.</p>
         <p><strong>Description:</strong> A small, transparent shrimp (up to 3 cm) with bluish and violet markings and long white antennae.</p>
         <p><strong>Fun Fact:</strong> Its transparency can be disrupted by exercise or stress, causing it to become opaque temporarily.</p>
         <p class="environment"><strong>Environmental Impact:</strong> Plays a beneficial role in reef ecosystems by controlling ectoparasite populations on fish. </br><a href="https://www.nhm.ac.uk/take-part/find-your-climate-action.html">Find your climate action!</a></p>
-        <textarea id="text"></textarea>
       </div>
     </div>
     
@@ -69,7 +67,7 @@
 
     <div>
       <div class="label" data-depth="50">
-        <h1 style="font-size: 30px;">Tropical rock lobster</h1>
+        <h1 style="font-size: 30px;">Tropical rock lobster <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         <p><strong>Habitat:</strong> The tropical rock lobster (Panulirus ornatus) lives in shallow coastal waters with sandy or rocky bottoms, often around coral reefs, up to depths of 50 metres.</p>
         <p><strong>Distribution:</strong> It is found throughout the Indo-Pacific region, including northern Australia, Southeast Asia, and parts of the western Pacific Ocean.</p>
         <p><strong>Description:</strong> Panulirus ornatus has a colourful, spiny body with long antennae and no claws, growing up to 50 cm in length.</p>
@@ -80,7 +78,7 @@
 
     <div>
       <div class="label" data-depth="100">
-        <h1 style="font-size: 30px;">Barnacles</h1>
+        <h1 style="font-size: 30px;">Barnacles <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         <p><strong>Habitat:</strong> Barnacles attach themselves to hard surfaces like rocks, ships, whales, and piers, often found in intertidal zones down to 100 metres deep.</p>
         <p><strong>Distribution:</strong> They are distributed worldwide in marine environments, from polar regions to tropical seas.</p>
         <p><strong>Description:</strong> Barnacles are small, hard-shelled crustaceans that live in calcareous plates and feed by filtering plankton with their feathery legs.</p>
@@ -99,7 +97,7 @@
 
     <div>
       <div class="label" data-depth="150">
-        <h1 style="font-size: 30px;">Hermit crabs</h1>
+        <h1 style="font-size: 30px;">Hermit crabs <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         <p><strong>Habitat:</strong> Hermit crabs live on the seabed in sandy or muddy environments and hide in empty snail shells for protection, found down to depths of 150 metres.</p>
         <p><strong>Distribution:</strong> They are common in coastal waters around the world, especially in temperate and tropical regions.</p>
         <p><strong>Description:</strong> Hermit crabs have soft, curved abdomens which they protect by occupying empty shells, with visible claws and long antennae.</p>
@@ -110,7 +108,7 @@
 
     <div>
       <div class="label" data-depth="200-400">
-        <h1 style="font-size: 30px;">copepods</h1>
+        <h1 style="font-size: 30px;">copepods <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         <p><strong>Habitat:</strong> Copepods live in nearly all aquatic environments, including oceans, freshwater lakes, rivers, and even damp soil.</p>
         <p><strong>Distribution:</strong> They are found worldwide and are one of the most abundant metazoans on Earth by number.</p>
         <p><strong>Description:</strong> Copepods are tiny, shrimp-like crustaceans with a teardrop-shaped body, long antennae, and a segmented tail.</p>
@@ -129,7 +127,7 @@
 
     <div>
       <div class="label" data-depth="4,000">
-        <h1 style="font-size: 30px;">Ice krill</h1>
+        <h1 style="font-size: 30px;">Ice krill <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         <p><strong>Habitat:</strong> Ice krill (Euphausia crystallorophias) live in cold Antarctic waters, often under sea ice and down to depths of 4,000 metres.</p>
         <p><strong>Distribution:</strong> They are found exclusively in the Southern Ocean around Antarctica, especially near the continental shelf.</p>
         <p><strong>Description:</strong> Ice krill are small, transparent shrimp-like crustaceans with large black eyes and bioluminescent organs.</p>
@@ -140,7 +138,7 @@
 
     <div>
       <div class="label" data-depth="8900">
-        <h1 style="font-size: 30px;">Alicella gigantea</h1>
+        <h1 style="font-size: 30px;">Alicella gigantea <button><img id="speak" style="height: 30px;" src="{{ url_for('static', filename='speaker.png') }}" alt="Text to Speech Button"/></button></h1>
         
         <p><strong>Habitat:</strong> Alicella gigantea lives in deep-sea trenches, mainly at abyssal and hadal depths down to 8,931 metres.</p>
         <p><strong>Distribution:</strong> Found in the North Atlantic, North Pacific, and South West Pacific Oceans.</p>
@@ -153,6 +151,15 @@
     <div>
       <img style="height: 350px;" src="{{url_for('static', filename='7.png')}}" alt="Alicella gigantea"/>
     </div>
+
+  </div>
+
+  <div class="nav-tab">
+    <ul>
+      <li><a href="{{ url_for('collection') }}">Collection</a></li>
+      <li><a href="{{ url_for('game') }}">Game</a></li>
+      <li><a href="{{ url_for('game') }}">Accessibility</a></li>
+    </ul>
 
   </div>
 
@@ -187,7 +194,10 @@
       window.addEventListener('scroll', updateDepthTab);
       updateDepthTab();
     });
+
+    
   </script>
 
 </body>
 </html>
+
