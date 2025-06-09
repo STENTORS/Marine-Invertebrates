@@ -16,6 +16,13 @@
 </head>
 <body>
 
+
+  <div class="spread" id="page-loader" style="display:none;">
+    <div class="loader reverse">
+      <div class="loader-content">🦞</div>
+    </div>
+  </div>
+
   <div id="google_translate_element"></div>
 
   <div class="container">
@@ -198,6 +205,22 @@
 
     
   </script>
+
+
+<script>
+  // Show loader on navigation button click
+  document.querySelectorAll('a.button-link, .nav-tab a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Only show loader for normal left-clicks (not ctrl/cmd or new tab)
+      if (
+        !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey &&
+        this.target !== '_blank' && this.href && this.origin === location.origin
+      ) {
+        document.getElementById('page-loader').style.display = 'flex';
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
