@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Marine Invertebrates</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Marine Crustaceans</h1>
+            <h1 style="font-style: italic;">Settings</h1>
+
+            <div class="box">
+                <h2>Accessibility Adjustments</h2>
+                <div style="margin-bottom: 1em;">
+                    <label for="text-size-controls"><strong>Text Size:</strong></label>
+                    <button id="decrease-text" aria-label="Decrease text size" style="margin-left: 1em;">A-</button>
+                    <button id="increase-text" aria-label="Increase text size">A+</button>
+                </div>
+                <div>
+                    <label for="google_translate_element"><strong>Translate:</strong></label>
+                    <div id="google_translate_element" style="display: inline-block; margin-left: 1em;"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav-tab">
+            <a href="{{ url_for('home') }}"><img style="width: 50px;" src="{{ url_for('static', filename='home.png')}}"></a>
+            <a href="{{ url_for('game') }}"><img style="width: 50px;" src="{{ url_for('static', filename='game.png')}}"></a>
+            <a href="{{ url_for('collection') }}"><img style="width: 50px;" src="{{ url_for('static', filename='collection.png')}}"></a>
+        </div>
+
+
+        <script>
+            // Text size adjustment
+            const increaseBtn = document.getElementById('increase-text');
+            const decreaseBtn = document.getElementById('decrease-text');
+            let currentSize = 100;
+
+            function setTextSize(size) {
+                document.body.style.fontSize = size + '%';
+            }
+
+            increaseBtn.addEventListener('click', () => {
+                if (currentSize < 200) {
+                    currentSize += 10;
+                    setTextSize(currentSize);
+                }
+            });
+
+            decreaseBtn.addEventListener('click', () => {
+                if (currentSize > 60) {
+                    currentSize -= 10;
+                    setTextSize(currentSize);
+                }
+            });
+
+            // Google Translate widget
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+                    'google_translate_element'
+                );
+            }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    </body>
+</html>

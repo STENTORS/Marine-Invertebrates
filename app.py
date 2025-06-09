@@ -5,6 +5,7 @@ from flask import url_for
 import API
 app = Flask(__name__)
 
+@app.route("/home")
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -18,3 +19,7 @@ def collection():
 @app.route("/game")
 def game():
     return render_template("ocean_game.html")
+
+@app.route("/accessability")
+def accessability():
+    return render_template("accessability.html")

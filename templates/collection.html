@@ -51,6 +51,12 @@
         </div>
         {% endfor %}
 
+        <div class="nav-tab">
+            <a href="{{ url_for('home') }}"><img style="width: 50px;" src="{{ url_for('static', filename='home.png')}}"></a>
+            <a href="{{ url_for('game') }}"><img style="width: 50px;" src="{{ url_for('static', filename='game.png')}}"></a>
+            <a href="{{ url_for('accessability') }}"><img style="width: 50px;" src="{{ url_for('static', filename='accessability.png')}}"></a>
+        </div>
+
         <script>
             function toggleGrid(id) {
                 const grid = document.getElementById(id);

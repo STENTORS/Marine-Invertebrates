@@ -11,8 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="{{ url_for('static', filename='speech2text.js')}}" type="module"></script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+
+  <div id="google_translate_element"></div>
 
   <div class="container">
     <h1>Marine Crustaceans</h1>
@@ -32,10 +36,10 @@
 
     <div class="button-grid">
       <a href="{{ url_for('collection') }}" class="button-link button">
-        Explore Our Full Collection of Crustaceans →
+        Explore Our Full Collection of Crustaceans → 
       </a>
       <a href="{{ url_for('game') }}" class="button-link button">
-        Ocean Clean up game →
+        Ocean Clean up game → 
       </a>
     </div>
 
@@ -155,12 +159,9 @@
   </div>
 
   <div class="nav-tab">
-    <ul>
-      <li><a href="{{ url_for('collection') }}">Collection</a></li>
-      <li><a href="{{ url_for('game') }}">Game</a></li>
-      <li><a href="{{ url_for('game') }}">Accessibility</a></li>
-    </ul>
-
+    <a href="{{ url_for('collection') }}"><img style="width: 50px;" src="{{ url_for('static', filename='collection.png')}}"></a>
+    <a href="{{ url_for('game') }}"><img style="width: 50px;" src="{{ url_for('static', filename='game.png')}}"></a>
+    <a href="{{ url_for('accessability') }}"><img style="width: 50px;" src="{{ url_for('static', filename='accessability.png')}}"></a>
   </div>
 
   <div id="depth-tab" class="depth-sticky-tab">
