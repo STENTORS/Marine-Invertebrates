@@ -339,10 +339,6 @@ button {
 }
 
 
-
-
-
-
 /* ...loader... */
 
 .spread {
@@ -380,4 +376,16 @@ button {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.error-message {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3000;
 }

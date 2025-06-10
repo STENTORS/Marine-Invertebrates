@@ -13,9 +13,26 @@
   <script src="{{ url_for('static', filename='speech2text.js')}}" type="module"></script>
 
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const errorMsg = document.querySelector('.error-message');
+    if (errorMsg) {
+      setTimeout(() => {
+        errorMsg.style.display = 'none';
+      }, 5000);
+    }
+  });
+</script>
 </head>
 <body>
 
+  {% if error %}
+  <div class="error-message">
+    <h3>{{ error }}</h3>
+    <p>Please try again later.</p>
+  </div>
+  {% endif %}
 
   <div class="spread" id="page-loader" style="display:none;">
     <div class="loader reverse">
