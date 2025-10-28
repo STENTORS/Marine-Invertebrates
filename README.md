@@ -1,4 +1,5 @@
-# Educational site about marine invertebrates
+#  🦞 Marine invertebrates 🦞
+Educational + interactive site
 <img width="488" height="512" alt="image" src="https://github.com/user-attachments/assets/7f793d8c-a115-4d1c-a4d9-8283d21b2676" />
 
 
